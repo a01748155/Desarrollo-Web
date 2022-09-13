@@ -12,4 +12,8 @@ router.post('/altaConsola',consolaController.postAltaConsola);
 //Servicio para consultar todos los datos
 router.get('/consultaConsola',consolaController.getConsultaConsola);
 
+router.get('/tarea2',consolaController.getTarea2);
+router.post('/tarea2',consolaController.postTarea2);
+
+
 module.exports = router;
