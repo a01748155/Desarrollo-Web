@@ -1,0 +1,14 @@
+h1{
+    background-color: rgb(22, 237, 237);
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-control{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: aquamarine;
+}
+
+#parr{
+    background-color: rgb(62, 3, 62);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: bisque;
+}
