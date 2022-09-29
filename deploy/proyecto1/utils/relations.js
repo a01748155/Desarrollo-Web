@@ -4,10 +4,11 @@ function applyRelations(sequelize){
     console.log(sequelize.models);
     const Company = sequelize.models.Company;
     const Videojuego = sequelize.models.Videojuego;
-    const Consola = sequelize.models.Consola
+    const Consola = sequelize.models.Consola;
+    const ConsolaVideojuego = sequelize.models.ConsolaVideojuego;
 
     //Compañia puede desarrollar varios videojuegos
-    Company.hasMany(videojuego);
+    Company.hasMany(Videojuego);
     //Un videojuego solo puede ser desarrollado por una compañía
     Videojuego.belongsTo(Company);
 

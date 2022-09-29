@@ -1,7 +1,7 @@
 //importar las bibliotecas
 const express = require('express');
 //Traer el objeto de conexión sequelize
-const sequelize = ('./utils/database');
+const sequelize = require('./utils/database');
 const path = require('path');
 const consolaRoutes = require('./routes/consola');
 
@@ -57,14 +57,11 @@ app.post('/prueba3',(req,res)=>{
 });
 
 // promesas
-sequelize.sync({force:true}) // force true normalmente solo se usa una vez y luego se quita porque se vuela todo
-    .then(()=>{ // encadena cosas y genera un proceso, evitando la volatilidad de las promesas, una solución de varias
+sequelize.sync({force:true})
+    .then(()=>{
         console.log('Conexión exitosa')
-        app.listen(8081,()=>{
+        app.listen(8080,()=>{
             console.log('Servidor en línea');
-        }); //puerto donde se ejecuta la aplicación y callback
-    }).catch(error=>console.log(error))// si no se sincroniza y se inicia el código sí truena entonces esto nos sirve para controlarlo
-    //las arrow function si no tienen atributo necesitan colocar (), si solo tienen uno entonces no es necesario colocar nada
-    //y si tienen varios entonces hay que enlistarlos
-    
+        }); 
+    }).catch(error=>console.log(error));
 

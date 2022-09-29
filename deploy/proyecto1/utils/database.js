@@ -20,7 +20,8 @@ const sequelize = new Sequelize('test','admin','WowerTecB3?',{
 const modelDefiners = [
     require('../models/videojuego'),
     require('../models/consola'),
-    require('../models/company')
+    require('../models/company'),
+    require('../models/consolaVideojuego')
 ];
 
 //Adherir los modelos al objeto de conexión 
